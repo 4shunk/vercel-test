@@ -9,5 +9,5 @@ class handler(BaseHTTPRequestHandler):
     self.end_headers()
     res = requests.get('https://vercel-test-jade-nu.vercel.app/api/date')
     body = res.text
-    self.wfile.write(body)
+    self.wfile.write(body.encode())
     return
